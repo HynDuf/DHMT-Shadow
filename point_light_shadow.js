@@ -12,6 +12,7 @@ camera.position.z = 5;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.BasicShadowMap
 document.body.appendChild(renderer.domElement);
 
 // Create OrbitControls
@@ -27,7 +28,7 @@ scene.add(cube);
 
 // Create a point light with shadows
 const pointLight = new THREE.PointLight(0xffffff, 10);
-pointLight.position.set(2, 2, 2);
+pointLight.position.set(1, 2, 1);
 pointLight.castShadow = true;
 scene.add(pointLight);
 

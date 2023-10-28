@@ -29,7 +29,6 @@ const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
 cube.castShadow = true;
 cube.receiveShadow = true;
-cube.position.set(-2, 0, -2);
 scene.add(cube);
 
 // Create and position the ground
@@ -43,13 +42,13 @@ scene.add(ground);
 
 // Create a spot light with shadows
 const spotLight = new THREE.SpotLight(0xeeeeee, 50);
-spotLight.position.set(-4, 2, -4);
+spotLight.position.set(1, 2, 1);
 spotLight.distance = 20;
 spotLight.castShadow = true;
 spotLight.angle = Math.PI * 0.15;
 spotLight.penumbra = 0.4;
 scene.add(spotLight);
-spotLight.target.position.set(-2, 0, -2);
+spotLight.target.position.set(0, 0, 0);
 scene.add(spotLight.target);
 const helper = new THREE.SpotLightHelper(spotLight);
 scene.add(helper);

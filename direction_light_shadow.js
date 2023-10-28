@@ -12,6 +12,7 @@ camera.position.z = 5;
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.BasicShadowMap
 document.body.appendChild(renderer.domElement);
 
 // Create OrbitControls
@@ -36,10 +37,10 @@ scene.add(cube2);
 
 // Create a direction light with shadows
 const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
-directionalLight.position.set(-2, 5, -2);
+directionalLight.position.set(-1, 2, -1);
 directionalLight.castShadow = true;
 scene.add(directionalLight)
-directionalLight.target.position.set(2, 0, 2)
+directionalLight.target.position.set(0, 0, 0)
 scene.add(directionalLight.target)
 const helper = new THREE.DirectionalLightHelper(directionalLight);
 scene.add(helper);
