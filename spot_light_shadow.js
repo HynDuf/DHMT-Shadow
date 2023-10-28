@@ -47,6 +47,8 @@ spotLight.distance = 20;
 spotLight.castShadow = true;
 spotLight.angle = Math.PI * 0.15;
 spotLight.penumbra = 0.4;
+spotLight.shadow.mapSize.width = 512;
+spotLight.shadow.mapSize.height = 512;
 scene.add(spotLight);
 spotLight.target.position.set(0, 0, 0);
 scene.add(spotLight.target);
